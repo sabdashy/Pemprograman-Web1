@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body style="font-family:'Lucida Sans Unicode'; font-size: 11px;">
+    <form action="form_hasilbarang.html" enctype="multipart/form-data">
+        <table style="border-collapse: collapse;" cellpadding="5px" align="center">
+            <thead style="border: 2px solid;">
+                <tr>
+                    <th>Home</th>
+                    <th width="50px">|</th>
+                    <th>Generate</th>
+                    <th style="text-align: left;">Link</th>
+                    <th width="50px">|</th>
+                    <th>Transaction History</th>
+                    <th width="50px">|</th>
+                    <th>Policy</th>
+                    <th width="50px">|</th>
+                    <th>Logout</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td height="10px"></td>
+                </tr>
+                <tr>
+                    <td rowspan="5" colspan="3"><label for="upload"><img src="../Praktikum02/image/kotaksilang.png" width="150px" alt=""></label></td>
+                    <td colspan="2"><label for="title">Title Here</label></td>
+                    <td colspan="4"> :
+                        <input type="text" name="title" id="title" style="width: 300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="deskripsi">Description</label></td>
+                    <td rowspan="3" colspan="4"> :
+                        <textarea type="text" name="deskripsi" id="deskripsi" rows="3" cols="41"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="number">Account Number</label></td>
+                    <td colspan="4"> :
+                        <input type="text" name="number" id="number" style="width: 300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button id="upload" style="background-color: white; border:groove">Upload Picture</button></td>
+                    <td colspan="2"><label for="bank">Bank</label></td>
+                    <td colspan="4"> :
+                        <select name="bank" id="bank" style="background-color: white; border: 1px solid;">
+                            <option>BRI</option>
+                            <option>BNI</option>
+                            <option>Mandiri</option>
+                            <option>BTN</option>
+                            <option selected="selected">HSBC</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2"><label for="holder">Account Holder</label></td>
+                    <td colspan="4">: 
+                        <input type="text" name="holder" id="holder" style="width: 300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2"><label for="transaksi">Transaction</label></td>
+                    <td colspan="4"> :
+                        <input type="number" name="transaksi" id="transaksi" style="width:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <td colspan="4">*if the transaction is for 3 person, choose 3 from the drop-down list</td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <td colspan="4">
+                        <input type="checkbox" name="send" id="mobile" style="accent-color: green;" checked>
+                        <label for="mobile" style="color: green;">Send to Mobile Phone</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <td colspan="4">
+                        <input type="checkbox" name="send" id="email" style="accent-color: green;" checked>
+                        <label for="email" style="color: green;">Send to Email</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2"><label for="tomobile">Send to Mobile Phone</label></td>
+                    <td colspan="4"> :
+                        <input type="text" name="tomobile" id="tomobile" style="width: 300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2"><label for="toemail">Send to Email</label></td>
+                    <td colspan="4"> :
+                        <input type="text" name="toemail" id="toemail" style="width: 300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td colspan="10" align="center"><button type="submit" name="submit" style="border: groove; background-color: green; color: white;">Generate Nabr Link</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="border-bottom: 2px solid;">
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
