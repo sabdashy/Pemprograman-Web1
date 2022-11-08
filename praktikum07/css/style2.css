@@ -1,0 +1,43 @@
+div{
+    border: 2px solid black;
+    text-align: center;
+    line-height: 100px;
+    font-size: 25px;
+    width: 100%;
+}
+.box1{
+    background-color: yellow;
+    width: 20%;
+    position: absolute;
+}
+.box2{
+    background-color: red;
+    width: 75%;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+.box3{
+    background-color: green;
+    width: 20%;
+    height: 400px;
+    position:absolute;
+
+}
+.box4{
+    background-color:grey;
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    left: 25%;
+}
+.box5{
+    background-color: aqua;
+    width: 20%;
+    height: 400px;
+    margin-left: auto;
+
+}
+.box6{
+    background-color: blue;
+    margin-top: 10px;
+}

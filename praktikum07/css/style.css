@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+.container{
+    /* width: 80%; */
+    float: left;
+    /* margin: 20px 0px 0px 120px; */
+    text-align: center;
+    background-color: aqua;
+    border: 2px solid black;
+
+}
+.container img{
+    width: 20%;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
