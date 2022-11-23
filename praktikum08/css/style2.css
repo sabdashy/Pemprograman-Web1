@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header,footer{
+    background-color: yellow;
+    height: 15vh;
+    text-align: center;
+    line-height: 15vh;
+}
+main{
+    display: flex;
+    height: 70vh;
+    text-align: center;
+    line-height: 70vh;
+}
+main article{
+    flex-grow: 3;
+    order: 2;
+}
+main aside{
+    background-color: pink;
+    flex-grow: 1;
+    order: 3;
+}
+main nav{
+    background-color: green;
+    flex: 1;
+    order: 1;
+}

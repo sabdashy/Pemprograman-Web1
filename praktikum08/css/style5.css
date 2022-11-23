@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+}
+header,footer{
+    background-color: aqua;
+    height:10vh;
+    margin:20px
+}
+main{
+    display: flex;
+    height: 70vh;
+    margin: 0 20px;
+}
+aside{
+    margin-right: 20px;
+    background-color: aquamarine;
+    flex: 1;
+}
+article{
+    background-color: red;
+    flex: 3;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+/* article .text{
+    height: 30vh;
+} */
+article img{
+    width: 20%;
+}
+/* .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:aquamarine;
+} */
+article .container1{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
