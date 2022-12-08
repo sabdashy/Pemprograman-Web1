@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kursRupiah.html">Nomor 2</a></li>
+                <li><a href="imagePicker.html">Nomor 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <fieldset>
+        <legend>Kurs Rupiah + Mata Uang Asing</legend>
+        <table>
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="bil"></td>
+                <td>
+                    <select id="mataUang" onchange="hitungKurs()">
+                        <option value="">---PILIH---</option>
+                        <option value="usd">USD</option>
+                        <option value="sgd">SGD</option>
+                        <option value="rm">RM</option>
+                        <option value="yen">YEN</option>
+                        <option value="euro">EURO</option>
+                        <option value="riyal">RIYAL</option>
+                    </select>
+                </td>
+                <td><input type="text" id="hasil"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <script>
+        function hitungKurs(){
+            let bil = document.getElementById("bil").value;
+            let valas = document.getElementById("mataUang").value;
+
+            if(valas == "usd"){
+                const dolarUS = 9915;
+                document.getElementById("hasil").value = "Rp. " + bil*dolarUS;
+            }
+            else if(valas == "sgd"){
+                const dolarSingapura = 13472;
+                document.getElementById("hasil").value = "Rp. " + bil*dolarSingapura;
+            }
+            else if(valas == "rm"){
+                const ringgitMalaysia = 874;
+                document.getElementById("hasil").value = "Rp. " + bil*ringgitMalaysia;
+            }
+            else if(valas == "yen"){
+                const yen = 120;
+                document.getElementById("hasil").value = "Rp. " + bil*yen;
+            }
+            else if(valas == "euro"){
+                const euro = 15888;
+                document.getElementById("hasil").value = "Rp. " + bil*euro;
+            }
+            else if(valas == "riyal"){
+                const riyal = 3592;
+                document.getElementById("hasil").value = "Rp. " + bil*riyal;
+            }
+            else{
+                document.getElementById("hasil").value = "Tidak terdaftar"
+            }
+        }
+    </script>
+</body>
+</html>
