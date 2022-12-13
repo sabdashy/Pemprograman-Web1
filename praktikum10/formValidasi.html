@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kursRupiah.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="imagePicker.html">Nomor 4</a></li>
+                <li><a href="formValidasi.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="kontainer">
+            <h2>TICKET EXPRESS</h2>
+            <br/>
+            <form name="formKu" id="form" >
+                <div class="input">
+                    <input type="text" name="nama" id="nama" placeholder="Nama">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="time" name="time" id="time" placeholder="Waktu Keberangkatan">
+                    <select name="tujuan" id="tujuan">
+                        <option value="0">Jakarta</option>
+                        <option value="1">Banten</option>
+                        <option value="2">Aceh</option>
+                        <option value="3">Cianjur</option>
+                        <option value="4">Nganjuk</option>
+                    </select>
+                    <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Tiket">
+                    <button type="submit" onclick="return(validasiKirim())">Kirim</button>
+                </div>
+                <br/>
+                <div class="output">
+                    <span id="outputNama"></span>
+                    <br/>
+                    <span id="outputEmail"></span>
+                    <br/>
+                    <span id="outputTime"></span>
+                    <br/>
+                    <span id="outputTujuan"></span>
+                    <br/>
+                    <span id="outputJumlah"></span>
+                    <br/>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function validasiKirim(){
+            if (validasiForm() == false){
+                alert("Data akan dikirim")
+                // validasiForm()
+                return false;
+            }
+            else if(validasiForm() == true){
+                alert("Data Tidak Terkirim Karna Ada Kesalahan")
+                return false;
+            }
+
+        }
+
+        function validasiForm() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let time = document.getElementById("time").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let jumlah = document.getElementById("jumlah").value;
+            let formatemail = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+            let atpos=email.indexOf("@");
+            let dotpos=email.lastIndexOf(".");
+
+            if (document.forms["formKu"]["nama"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formKu"]["nama"].focus();
+                return false;
+            }
+            else if (document.forms["formKu"]["time"].value == "") {
+                alert("Masukan Waktu Pemberangkatan");
+                document.forms["formKu"]["time"].focus();
+                return false;
+            }
+            else if (document.forms["formKu"]["email"].value == "" || atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+                alert("Masukan Email Anda Dengan Benar");
+                document.forms["formKu"]["email"].focus();
+                return false;
+            }
+            else if (document.forms["formKu"]["tujuan"].selectedIndex < 1) {
+                alert("Pilih Tujuan Anda Dengan Benar");
+                document.forms["formKu"]["tujuan"].focus();
+                return false;
+            }
+            else if (document.forms["formKu"]["jumlah"].value == "") {
+                alert("Masukan Jumlah Tiket Anda Dengan Benar");
+                document.forms["formKu"]["jumlah"].focus();
+                return false;
+            }
+            else{
+                document.getElementById("outputNama").innerHTML = "Nama : " + nama;
+                document.getElementById("outputEmail").innerHTML = "Email : " + email;
+                document.getElementById("outputTime").innerHTML = "Time : " + time;
+                document.getElementById("outputTujuan").innerHTML = "Tujuan : " + tujuan;
+                document.getElementById("outputJumlah").innerHTML = "Jumlah : " + jumlah;
+                return false;
+            }
+        }
+    </script>
+
+    <!-- <script>
+        function validateForm() {
+            if (document.forms["formPendaftaran"]["nama"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["nama"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["email"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["jurusan"].selectedIndex < 1) {
+                alert("Pilih Jurusan.");
+                document.forms["formPendaftaran"]["jurusan"].focus();
+                return false;
+            }
+        }
+    </script> -->
+</body>
+</html>
