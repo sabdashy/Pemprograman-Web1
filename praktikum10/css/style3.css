@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+.navbar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    border-radius: 2em;
+}
+a:hover {
+    background-image: linear-gradient(rgb(27, 218, 36), rgb(252, 252, 252));        
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    /* background-color: antiquewhite; */
+}
+
+#kontainer {
+    padding:10px;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    /* background-color: azure; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+#box {
+    height:50vh;
+    width:50%;
+    margin-bottom:10px;
+    overflow:auto;
+    scroll-behavior: auto;
+    /* overflow: hidden; */
+    border: 2px solid black;
+    border-radius: 20px 0px 0px 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+#box #formPesan{
+    position: fixed;
+    top:70%;
+    left: 50%;
+    
+}
+#pesan {
+    height:30px;
+    padding: 5px;
+    border:1px solid black;
+    width: 75%;
+}
+button {
+    height:30px;
+    width:23%;
+    float: right;
+    text-transform: uppercase;
+}
+
+.output{
+    font-size: 0.6em;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+}
