@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/style3.css"> -->
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs-rupiah.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="image-picker.html">Nomor 4</a></li>
+                <li><a href="validation.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="kontainer" id="kontainer">
+            <div class="main" id="box">
+                <div class="output" id="output"></div>
+                <br>
+                <form onsubmit="kirim()" id="formPesan">
+                    <input type="text" name="pesan" id="pesan">
+                    <button class="kirim">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let form = document.getElementById("formPesan");
+        let input = document.getElementById('pesan');
+        let output = document.getElementById('output');
+        let mesValue = 'Aku: ' + input.value;
+        function handleForm(event) {
+            event.preventDefault();
+        }
+
+        form.addEventListener('submit', handleForm);
+
+        function kirim() {
+            output.innerHTML += 'Aku: ' + input.value + "<br>";
+            scroll('output');
+            form.reset();
+        }
+
+        function scroll(id) {
+            let div = document.getElementById(id);
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+        }
+    </script>
+</body>
+</html>
